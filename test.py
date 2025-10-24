@@ -3,10 +3,10 @@
 
 #publish:
 #twine upload dist/*
-#pypi-AgEIcHlwaS5vcmcCJDJmMmQwNGY2LTU1NzEtNDViOC1hOGMwLTAwNTUwOTNlODhlMAACKlszLCJiZjgyMGQxNC05MzU5LTQ1NWEtODIzMS02NGZjZGFhOTRiNDAiXQAABiA5cDdUBveb6E39IqyGlQhB30vOUKM0uBqYv1IcD_CgZw
-slack_app="xapp-1-A09MUEPTW3H-9786258264144-9c7adc177137c3a2ab8401e9cfcf6f7096a9eba4c7a6eb68612777879dcf441e"
-slack_bot="xoxb-2210535565-9761529116596-exH2izSAyn558vFNdHZI2qfy"
-discord_token="MTQzMTMwOTY3ODUwMzAwNjI1OA.GCgse-.Mw4hR2ONjjYhjhYsATmVTUi1xiwzIaMkkPvsks"
+
+slack_app="Insert your Slack App Level Token here (xapp...)"
+slack_bot="Insert your Slack Bot User OAuth Token here (xoxb...)"
+discord_token="Insert your Discord Bot Token here (Bot Token)"
 
 import pekka
 

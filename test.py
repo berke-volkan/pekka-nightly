@@ -4,13 +4,14 @@
 #publish:
 #twine upload dist/*
 
-slack_app="Insert your Slack App Level Token here (xapp...)"
-slack_bot="Insert your Slack Bot User OAuth Token here (xoxb...)"
-discord_token="Insert your Discord Bot Token here (Bot Token)"
+slack_app="xapp-1-A09MUEPTW3H-9786258264144-9c7adc177137c3a2ab8401e9cfcf6f7096a9eba4c7a6eb68612777879dcf441e"
+slack_bot="xoxb-2210535565-9761529116596-exH2izSAyn558vFNdHZI2qfy"
+discord_token="MTQzMTMwOTY3ODUwMzAwNjI1OA.GCgse-.Mw4hR2ONjjYhjhYsATmVTUi1xiwzIaMkkPvsks"
 
 import pekka
 
-app=pekka.app(slack_bot)
+#app=pekka.app(slack_bot)
+print(pekka.ai(api_key="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",text="whats up"))
 pekka.slash_command(app=app[0],discord_bot=app[1],command="hello", text="Hello from Pekka bot!",platform=["slack"])
 pekka.slash_command(app=app[0],discord_bot=app[1],command="hey", text="This is a help message from Pekka bot.")
 pekka.run_app(slack_app=slack_app,discord_token=discord_token,sapp=app[0],discord_bot=app[1])

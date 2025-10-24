@@ -2,7 +2,7 @@ from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from discord.ext import commands
 import discord
-
+from openai import OpenAI
 def hello():
     print("Hello, World!")
 
@@ -22,6 +22,16 @@ def slash_command(app,command,text,discord_bot,platform=["slack","discord"]):
         @discord_bot.slash_command(name=command, description=text)
         async def command(ctx: discord.ApplicationContext):
             await ctx.respond(text)
+def ai(api_key,text,model="deepseek/deepseek-chat-v3-0324:free"):
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=api_key
+    )
+    completion = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user","content": text}]
+    )
+    return(completion.choices[0].message.content)
 def run_app(sapp,slack_app,discord_bot,discord_token):
     import threading
     import asyncio

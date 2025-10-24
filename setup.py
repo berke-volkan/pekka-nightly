@@ -4,5 +4,5 @@ setup(
     name="pekka",
     version="0.1",
     packages=find_packages(),
-    install_requires=["slack-bolt","py-cord"],
+    install_requires=["slack-bolt","py-cord","openai"],
 )
